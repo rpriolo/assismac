@@ -1,0 +1,44 @@
+:root {
+    --brand-color: #17408F;
+    --dark-color: #313F5A;
+    --mid-color: #6388BF;
+    --light-color: #F7F7FF;
+    /* --highlight: #45B69C; */
+    --highlight: #4C9A88;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.banner {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../img/banner.png');
+    width: 100vw;
+    padding: 32px 16px;
+    box-sizing: border-box;
+}
+
+.banner__titulo {
+    font-size: 1.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 2.25rem;
+    margin-bottom: 12px;
+}
+
+.banner__titulo strong {
+    font-weight: 700;
+}
+
+.banner__titulo strong::before {
+    content: '\a';
+    white-space: pre;
+}
+
+.banner__descricao {
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.4rem;
+}

@@ -1,6 +1,22 @@
+/* :root {
+    --azul-principal: #17408f;
+    --azul-secundario: #313f5a;
+    --azul-terciario: #6388bf;
+    --branco: #f7f7ff;
+} */
+
+:root {
+    --brand-color: #17408F;
+    --dark-color: #313F5A;
+    --mid-color: #6388BF;
+    --light-color: #F7F7FF;
+    /* --highlight: #45B69C; */
+    --highlight: #4C9A88;
+}
+
 .cabecalho {
-    background-color: white;
-    color: #2E3A4E;
+    background-color: #FFFFFF;
+    color: var(--dark-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,40 +37,61 @@
     width: 150px;
 }
 
+.telefone {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    background-color: var(--dark-color);
+    color: #FFFFFF;
+    position: relative;
+    width: 100vw;
+}
+
+.telefone__central {
+    padding: 4px;
+}
+
+.telefone__numero {
+    padding: 4px;
+    font-weight: 700;
+}
+
 .menu-lateral {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    background-color: #F0F2F3;
+    background-color: var(--light-color);
+    position: fixed;
     width: 60vw;
-    height: calc(100vh - 72.36px - 15px);
+    height: 100vh;
+    right: -100vw;
     padding-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: end;
-    position: absolute;
-    top: calc(-100vh - 15px);
-    right: 0;
-    transition: 300ms;
+    transition: 0.5s;
     border-left: 1px solid rgba(45, 57, 77, 0.1);
-    z-index: 1;
+    z-index: -999;
+    box-sizing: border-box;
 }
 
 .menu-lateral--ativo {
-    position: absolute;
-    top: 72.36px;
+    position: fixed;
     right: 0;
-    transition: 300ms;
-    z-index: 1;
+    transition: 0.5s;
+    z-index: 999;
 }
 
-
 .menu-lateral__link {
-    color: #2E3A4E;
-    padding: 15px 20px;
+    color: var(--dark-color);
+    padding: 16px 24px;
     font-weight: 500;
 }
 
 .menu-lateral__link--ativo {
-    border-right: 8px solid #2E3A4E;
+    padding-right: calc(24px - 8px);
+    border-right: 8px solid var(--dark-color);
     font-weight: 900;
 }
